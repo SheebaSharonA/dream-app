@@ -1,0 +1,64 @@
+/* Home.css */
+/* Import a Google font */
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center; /* Horizontally center items */
+  height: 100vh; /* Full height of the viewport */
+  background-color: #f8f9fa; /* Light background color */
+}
+
+.home-heading {
+  font-family: 'Tangerine', cursive;
+  font-size: 50px;
+  margin-top: 50px; /* Adjust margin-top for spacing */
+  color: #333; /* Dark text color */
+  text-align: center; /* Center the heading text */
+  max-width: 80%; /* Ensure text fits well on small screens */
+  line-height: 1.2;
+}
+.card {
+  background-color: white;
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  padding: 20px;
+  width: 80%; /* Set width of the card */
+  max-width: 500px; /* Maximum width of the card */
+  margin-top: 30px; /* Space between heading and card */
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Arrange items vertically */
+  justify-content: space-between; /* Push button to the bottom */
+  text-align: center; /* Center text inside the card */
+  height: 250px; /* Fixed height to maintain consistent spacing */
+}
+
+.card h2 {
+  color: #111; /* Darker headline text */
+  font-size: 24px; /* Adjust font size as needed */
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #333; /* Darker text for description */
+  font-size: 16px; /* Adjust size to match the design */
+  margin-bottom: auto; /* Ensure text stays at the top if card grows */
+}
+
+.button {
+  display: inline-block;
+  background-color: #333; /* Dark button color */
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  align-self: center; /* Center the button horizontally */
+  margin-top: 10px; /* Spacing above the button */
+}
+
+.button:hover {
+  background-color: #555; /* Slightly lighter shade on hover */
+}
