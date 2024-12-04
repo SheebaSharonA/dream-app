@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  background-color: #E8D9F1; /* Very light violet background for the page */
+  min-height: 100vh; /* Full screen height */
+  color: #4A235A; /* Darker text color for contrast */
 }
 
 .App-logo {
@@ -14,18 +17,18 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #D7B5E2; /* Light violet for the header */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #4A235A; /* Dark text for contrast */
 }
 
 .App-link {
-  color: #61dafb;
+  color: #61dafb; /* Adjusted link color for contrast */
 }
 
 @keyframes App-logo-spin {
