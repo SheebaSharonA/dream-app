@@ -1,23 +1,33 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-
+import Navbar from './compontents/navbar';
+import Analyse from './pages/analyse';
+import Diary from './pages/diary';
+import Home from './pages/home';
 function App() {
+
+  let compontent
+  //console.log(window.location.pathname)
+  switch(window.location.pathname){
+    case '/analyse':
+      compontent = <Analyse />
+      break;
+    
+    case '/diary':
+      compontent = <Diary />
+      break;
+
+    case '/Home':
+      compontent = <Home />
+      break;
+    default:
+      break;
+  }
+     //compontent = <Analyse />
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Navbar />
+     {compontent }
     </div>
   );
 }
