@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Navbar from './compontents/navbar';
 import Analyse from './pages/analyse';
+
 import Diary from './pages/diary';
 import Home from './pages/home';
 function App() {
