@@ -7,7 +7,7 @@ function Home() {
   const [data,setdata] = useState([{}])
 
   useEffect(()=>{
-        fetch("/members").then(
+        fetch("/quote").then(
           res => res.json()
         ).then(
             data => {
@@ -38,9 +38,9 @@ function Home() {
         </div>
           <div className="card-back">
             <h2>Brighten Your Day!</h2>
-            {(typeof data.members === 'undefined')?
+            {(typeof data.quote_data === 'undefined')?
            (<p>loading...</p>):
-              (<p>{data.members[0]}</p>)
+              (<p>{data.quote_data[0]}</p>)
             }
            
           </div>
