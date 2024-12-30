@@ -6,7 +6,7 @@ import Diary from './pages/diary';
 import Home from './pages/home';
 function App() {
 
-  let compontent
+  let compontent = <Home />
   //console.log(window.location.pathname)
   switch(window.location.pathname){
     case '/analyse':

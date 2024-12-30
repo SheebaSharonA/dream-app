@@ -1,9 +1,22 @@
 import React from 'react';
 import "./home.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Home() {
   const [isFlipped, setIsFlipped] = useState(false);
+  const [data,setdata] = useState([{}])
+
+  useEffect(()=>{
+        fetch("/members").then(
+          res => res.json()
+        ).then(
+            data => {
+              setdata(data)
+              console.log(data)
+            }
+        )
+  },[])
+
 
   const handleFlip = () => {
     setIsFlipped(!isFlipped); // Toggle the flipped state
@@ -25,7 +38,11 @@ function Home() {
         </div>
           <div className="card-back">
             <h2>Brighten Your Day!</h2>
-           <p>"Every moment is a fresh beginning."</p>
+            {(typeof data.members === 'undefined')?
+           (<p>loading...</p>):
+              (<p>{data.members[0]}</p>)
+            }
+           
           </div>
       </div>
     </div>
