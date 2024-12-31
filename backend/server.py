@@ -1,5 +1,6 @@
 from flask import Flask
 import requests
+from huggingface_hub import InferenceClient
 
 app = Flask(__name__)
 
@@ -32,6 +33,8 @@ def quote():
     if quote_data:
         result = quote_data["quote"]["body"]
     return {"quote_data":[result, "Members2", "Members3"]}
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)
