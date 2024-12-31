@@ -36,26 +36,5 @@ def quote():
 
 
 
-
-@app.route("/analyse_dream")
-def analyse_dream():
-    client = InferenceClient(api_key="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")
-
-    messages = [
-	    {
-		    "role": "user",
-		    "content": "give the symbolism and meaning behind this dream, i had a dream that i forgot my phone and id card on my way to catch the bus which i never do in real life"
-	    }
-    ]
-
-    completion = client.chat.completions.create(
-        model="Qwen/QwQ-32B-Preview", 
-	    messages=messages, 
-	    max_tokens=500
-    )
-
-    result = completion.choices[0].message.content
-    return {"analyse_dream_json":[result,"result2","result3"]}
-
 if __name__ == "__main__":
     app.run(debug=True)
