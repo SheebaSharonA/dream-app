@@ -1,6 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Diary.css';
+import './AllEntries.css';
+
 
 const AllEntries = ({ entries }) => {
   const navigate = useNavigate();
