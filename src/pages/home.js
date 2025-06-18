@@ -31,7 +31,7 @@ function Home() {
       <div className={`card ${isFlipped ? "flipped" : ""}`}>
         <div className="card-front">
           
-          <p>TAP the card, let magic play—unlock a quote to brighten your day!</p>
+          <p>Tap the card, let magic play—unlock a quote to brighten your day!</p>
           <button className="flip-button" onClick={handleFlip}>
             Reveal
           </button>
